@@ -1,0 +1,78 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "colcon clean",
+      "type": "shell",
+      "command": "rm",
+      "args": [
+        "-rf",
+        "${workspaceFolder}/../build",
+        "${workspaceFolder}/../install"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "colcon build (Debug)",
+      "type": "shell",
+      "command": "colcon",
+      "args": [
+        "build",
+        "--cmake-args",
+        "-DCMAKE_BUILD_TYPE=Debug"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/.."
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "colcon build (RelWithDebInfo)",
+      "type": "shell",
+      "command": "colcon",
+      "args": [
+        "build",
+        "--cmake-args",
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/.."
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "colcon build (Release)",
+      "type": "shell",
+      "command": "catkin_make",
+      "args": [
+        "--cmake-args",
+        "-DCMAKE_BUILD_TYPE=Release"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/.."
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    }
+  ]
+}
