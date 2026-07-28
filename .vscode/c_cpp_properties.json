@@ -7,12 +7,14 @@
             },
             "includePath": [
                 "${workspaceFolder}/**",
+                "/usr/include/**",
+                "/usr/local/include/**",
                 "/usr/local/cuda/include",
-                "/opt/ros/humble/include/**"
+                "/opt/ros/lyrical/include/**"
             ],
             "name": "ROS2",
             "intelliSenseMode": "gcc-x64",
-            "compilerPath": "/usr/bin/clang",
+            "compilerPath": "/usr/lib/ccache/gcc-16",
             "cStandard": "c11",
             "cppStandard": "c++20"
         }

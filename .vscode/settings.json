@@ -80,8 +80,10 @@
     },
     "python.pythonPath": "/usr/bin/python",
     "C_Cpp.errorSquiggles": "Enabled",
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
     "files.trimTrailingWhitespace": true,
     "editor.tabSize": 2,
+    "editor.formatOnType": true,
+    "C_Cpp.default.compilerPath": "/usr/lib/ccache/gcc-16",
 }

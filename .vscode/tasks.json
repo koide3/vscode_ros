@@ -21,6 +21,7 @@
       "command": "colcon",
       "args": [
         "build",
+        "--symlink-install",
         "--cmake-args",
         "-DCMAKE_BUILD_TYPE=Debug"
       ],
@@ -41,8 +42,15 @@
       "command": "colcon",
       "args": [
         "build",
+        "--symlink-install",
         "--cmake-args",
-        "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+        "-DBUILD_TESTING=OFF",
+        "-G",
+        "Ninja",
+        "--event-handlers",
+        // "status+"
+        "console_direct+"
       ],
       "options": {
         "cwd": "${workspaceFolder}/.."
@@ -58,8 +66,10 @@
     {
       "label": "colcon build (Release)",
       "type": "shell",
-      "command": "catkin_make",
+      "command": "colcon",
       "args": [
+        "build",
+        "--symlink-install",
         "--cmake-args",
         "-DCMAKE_BUILD_TYPE=Release"
       ],
